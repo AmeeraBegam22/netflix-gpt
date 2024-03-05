@@ -11,3 +11,18 @@
 -NetflixGPT
     -Search bar
     -Movie suggestion
+
+-BrowsePage
+   -Header
+   -Main container
+      -main movideo
+      -movideo title
+   -Secondary container
+      -movie list * n
+         - card * n
+-Secondary Container
+   -movie List
+      -movieCard * n
+   -now playing
+   -Trrending
+   -
