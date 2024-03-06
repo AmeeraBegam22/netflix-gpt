@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
 import { LOGO } from '../utils/constant';
+import { toggleGptSearchView } from '../utils/gptSlice';
 
 const Header = () => {
 const dispatch = useDispatch();
@@ -44,6 +45,7 @@ const handleSignOut = () => {
 
 const handleGPTSearchView = () => {
     //handletoggle
+    dispatch(toggleGptSearchView());
 }
  
   return (
