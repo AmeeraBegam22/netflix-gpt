@@ -5,6 +5,7 @@ import {  createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProf
 import { auth } from '../utils/firebase'
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { BG_LOGO } from '../utils/constant';
 
 
 const Login = () => {
@@ -23,8 +24,8 @@ const Login = () => {
 
   const handleButtonclick = () => {
    
-      console.log(email.current.value);
-     console.log(password.current.value);
+     // console.log(email.current.value);
+    // console.log(password.current.value);
     const message = checkValidateData(email.current.value,password.current.value);
    // console.log(message);
     seterrorMessage(message);
@@ -37,7 +38,7 @@ const Login = () => {
   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
-    console.log(user);
+   // console.log(user);
           updateProfile(user, {
             displayName: name.current.value,
           })
@@ -86,7 +87,7 @@ const Login = () => {
    <div>
      <Header/>
      <div className='absolute'>
-     <img src='https://assets.nflxext.com/ffe/siteui/vlv3/4da5d2b1-1b22-498d-90c0-4d86701dffcc/1466bdef-8a6a-468a-9e4b-fe44f4468738/SA-en-20240129-popsignuptwoweeks-perspective_alpha_website_small.jpg'
+     <img src={BG_LOGO}
         alt='logo'
      />
      </div>
